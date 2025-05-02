@@ -2,7 +2,7 @@
  "actions": [],
  "allow_rename": 1,
  "autoname": "naming_series:",
- "creation": "2024-07-09 17:15:42.257937",
+ "creation": "2025-04-27 00:29:34.701195",
  "default_view": "List",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -47,8 +47,7 @@
    "fieldtype": "Select",
    "label": "Naming Series",
    "options": "\nRT-DP-.####\nBIO-DP-.####\nDD-DP-.####\nTIMB-DP-.####",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "customer",
@@ -57,8 +56,7 @@
    "in_standard_filter": 1,
    "label": "Customer",
    "mandatory_depends_on": "eval:doc.plan_for==\"Delivery\"",
-   "options": "Customer",
-   "reqd": 1
+   "options": "Customer"
   },
   {
    "fetch_from": "customer.customer_name",
@@ -84,8 +82,7 @@
    "in_standard_filter": 1,
    "label": "Tentative Delivery Date  ",
    "permlevel": 2,
-   "read_only_depends_on": "eval:doc.rescheduled == 0",
-   "reqd": 1
+   "read_only_depends_on": "eval:doc.rescheduled == 0"
   },
   {
    "default": "0",
@@ -98,8 +95,7 @@
    "fieldname": "sales_person",
    "fieldtype": "Link",
    "label": "Sales Person",
-   "options": "Sales Person",
-   "reqd": 1
+   "options": "Sales Person"
   },
   {
    "fieldname": "incharge",
@@ -153,8 +149,7 @@
   {
    "fieldname": "from",
    "fieldtype": "Data",
-   "label": "From",
-   "reqd": 1
+   "label": "From"
   },
   {
    "fieldname": "column_break_ab6tf",
@@ -169,8 +164,7 @@
   {
    "fieldname": "to",
    "fieldtype": "Data",
-   "label": "To",
-   "reqd": 1
+   "label": "To"
   },
   {
    "fieldname": "item_details_section",
@@ -181,8 +175,7 @@
    "fieldname": "delivery_plan_item",
    "fieldtype": "Table",
    "label": "Delivery Plan Item",
-   "options": "Delivery Plan Item",
-   "reqd": 1
+   "options": "Delivery Plan Item"
   },
   {
    "fieldname": "vehicle_detail_section",
@@ -243,8 +236,7 @@
   {
    "fieldname": "reason_for_pending",
    "fieldtype": "Data",
-   "label": "Reason for Pending",
-   "mandatory_depends_on": "eval: doc.status == 'Pending'"
+   "label": "Reason for Pending"
   },
   {
    "fieldname": "project",
@@ -263,8 +255,8 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-03-28 13:15:42.420686",
- "modified_by": "Administrator",
+ "modified": "2025-04-28 10:44:27.598343",
+ "modified_by": "ayaan@hg.com",
  "module": "Homegenie",
  "name": "Delivery Plan",
  "naming_rule": "By \"Naming Series\" field",
@@ -283,6 +275,7 @@
    "write": 1
   }
  ],
+ "row_format": "Dynamic",
  "sort_field": "modified",
  "sort_order": "DESC",
  "states": [],
